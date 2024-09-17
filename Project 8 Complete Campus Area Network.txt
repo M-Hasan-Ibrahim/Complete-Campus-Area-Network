@@ -1,0 +1,110 @@
+Used Technologies:
+
+1- Basic device configuration: SSH, ACL, VLANs, STP, EtherChannel
+2- HSRP (Hot standby router protocol) and Inter-VLAN routing using SVI (switch virtual interface)
+3- Configuration of different types of servers: DHCP, DNS, FTP, Email
+4- OSPF (Open shortest path first) routing protocol
+5- Wireless Configuration using WLC (Wireless LAN Controlelr) and LAP (Lightweight Access Point)
+6- Firewall interface security zones and levels
+7- Basic firewall inspection policy
+8- IPsec VPN and IPsec tunneling between Firewalls
+----------------------------------------------
+L2 SWTICH PORTS
+
+
+fa0/1-2 trunk
+fa0/3-20 access for LAN
+fa0/21 access for WLAN
+rest -> unused vlan and shutdown
+
+IT:
+fa0/16-20 access for Management
+--------------------------------------------
+SUBNETTING AND VLANS
+
+LAN MAIN    172.16.0.0    /16 DHCP   VLAN 20
+LAN BRANCH  172.17.0.0    /16 DHCP   VLAN 30
+WLAN MAIN   10.10.0.0     /16 DHCP   VLAN 50 
+WLAN BRANCH 10.11.0.0     /16 DHCP   VLAN 60 
+DMZ         10.20.20.0    /27 STATIC
+MANAGEMENT  192.168.10.0  /24 DHCP   VLAN 10
+CLOUD       8.0.0.0       /8  STATIC
+UNUSED PORTS = VLAN 999
+--------------------------------------------
+SERVER IP ADDRESS
+DHCP 1  10.20.20.2
+DHCP 2  10.20.20.3
+DNS     10.20.20.4
+HTTPs   10.20.20.5
+EMAIL   10.20.20.6
+FTP     10.20.20.7
+----------------------------------------------
+WLC: admin Admin123
+    name1: EMPLOYEE-WIFI
+    name2: GUESTS-WIFI
+    name3: STUDENTS-WIFI
+    password: Cisco123
+----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
